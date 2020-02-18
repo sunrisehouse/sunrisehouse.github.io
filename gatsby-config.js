@@ -11,4 +11,16 @@ module.exports = {
         description: 'Han Jungwoo Blog',
         author: '@HanJungwoo',
     },
+    plugins: [
+        {
+            resolve: 'gatsby-source-filesystem',
+            options: {
+                name: 'posts',
+                path: `${__dirname}/posts/`,
+            },
+        },
+        {
+            resolve: 'gatsby-transformer-remark', // gatsby-source-filesystem 뒤에 와야함.
+        }
+    ]
 };
