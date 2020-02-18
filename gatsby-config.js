@@ -5,5 +5,10 @@
  */
 
 module.exports = {
-  /* Your site config here */
-}
+    /* Your site config here */
+    siteMetadata: {
+        title: 'HanJungwoo',
+        description: 'Han Jungwoo Blog',
+        author: '@HanJungwoo',
+    },
+};

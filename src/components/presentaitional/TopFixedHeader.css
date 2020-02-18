@@ -1,0 +1,18 @@
+.top-fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+
+    background-color: white;
+    border-bottom: 1px solid #000000;
+}
+
+.top-fixed-header-clear {
+    height: 60px;
+}
