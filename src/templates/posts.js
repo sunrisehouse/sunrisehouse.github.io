@@ -3,6 +3,8 @@ import { graphql } from "gatsby"
 
 import Layout from '../components/container/Layout';
 import SEO from "../components/container/Seo";
+import FixedRightSideBar from "../components/presentaitional/FixedRightSideBar";
+import MarkdownAutoLink from "../components/container/MarkdownAutoLink";
 
 // this prop will be injected by the GraphQL query below.
 export default ({ data }) => {
@@ -24,6 +26,9 @@ export default ({ data }) => {
                     />
                 </div>
             </div>
+            <FixedRightSideBar>
+                <MarkdownAutoLink/>
+            </FixedRightSideBar>
         </Layout>
     )
 }
