@@ -32,7 +32,7 @@ module.exports = {
                     {
                         resolve: 'gatsby-remark-autolink-headers',
                         options: {
-                            className: 'hello',
+                            className: 'markdown-header-auto-link',
                         }
                     },
                 ]
