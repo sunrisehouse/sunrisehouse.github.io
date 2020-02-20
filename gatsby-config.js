@@ -26,7 +26,7 @@ module.exports = {
                     {
                         resolve: 'gatsby-remark-images',    // margin down 내 image 넣기 위해 추가
                         options: {
-                            maxWidth: 960,
+                            maxWidth: 730,
                         }
                     }
                 ]
