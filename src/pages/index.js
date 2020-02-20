@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/container/Layout";
-import PostItem from "../components/presentaitional/PostItem";
+import PostPreview from "../components/presentaitional/PostPreview";
 
 export default ({ data }) => {
     const posts = data.allMarkdownRemark.edges;
@@ -14,7 +14,7 @@ export default ({ data }) => {
             {
                 posts.map(({ node }) => {
                     return (
-                        <PostItem
+                        <PostPreview
                             id={node.frontmatter.id}
                             title={node.frontmatter.title}
                             description={node.excerpt}
