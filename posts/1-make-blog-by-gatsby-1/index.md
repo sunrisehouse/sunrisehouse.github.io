@@ -17,3 +17,5 @@ title: "Gatsby 로 개인 blog 만들기 (1)"
 ```
     gatsby new blog h
 ```
+
+![sss](./2r58ajb.jpg)

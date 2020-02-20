@@ -21,9 +21,22 @@ module.exports = {
         },
         {
             resolve: 'gatsby-transformer-remark', // gatsby-source-filesystem 뒤에 와야함.
+            options: {
+                plugins: [
+                    {
+                        resolve: 'gatsby-remark-images',
+                        options: {
+                            maxWidth: 960,
+                        }
+                    }
+                ]
+            }
         },
         {
             resolve: 'gatsby-plugin-react-helmet',
+        },
+        {
+            resolve: 'gatsby-plugin-sharp',
         },
     ]
 };
