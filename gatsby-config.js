@@ -21,6 +21,9 @@ module.exports = {
         },
         {
             resolve: 'gatsby-transformer-remark', // gatsby-source-filesystem 뒤에 와야함.
-        }
+        },
+        {
+            resolve: 'gatsby-plugin-react-helmet',
+        },
     ]
 };

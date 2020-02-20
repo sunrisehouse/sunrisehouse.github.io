@@ -3,12 +3,16 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/container/Layout";
 import PostPreview from "../components/presentaitional/PostPreview";
+import SEO from "../components/container/Seo";
 
 export default ({ data }) => {
     const posts = data.allMarkdownRemark.edges;
 
     return (
         <Layout>
+            <SEO
+                title="home"
+            />
             hi
 
             {
