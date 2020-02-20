@@ -1,4 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
+
+import SmoothScroll from 'smooth-scroll';
+
 import Anchor from '../presentaitional/Anchor';
 
 const filterAnchorDetails = anchors => {
@@ -50,6 +53,14 @@ export default () => {
             return (
                 <Anchor title={anchor.title} href={anchor.href}/>
             );
+        });
+    }, []);
+
+    useEffect(() => {
+        new SmoothScroll('a[href*="#"]', {
+            speed: 500,
+            speedAsDuration: false,
+            easing: 'easeInOutCubic',
         });
     }, []);
 
