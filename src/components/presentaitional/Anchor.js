@@ -1,13 +1,15 @@
 import React from 'react';
 
+import scrollTo from 'gatsby-plugin-smoothscroll';
+
 import './Anchor.css';
 
 export default ({ title, href, children }) => {
     return (
         <div className="anchor">
-            <a href={href}>
+            <div onClick={() => scrollTo(href)}>
                 {title}
-            </a>
+            </div>
             {children}
         </div>
     );

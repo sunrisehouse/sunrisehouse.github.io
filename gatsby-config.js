@@ -44,5 +44,8 @@ module.exports = {
         {
             resolve: 'gatsby-plugin-sharp',
         },
+        {
+            resolve: 'gatsby-plugin-smoothscroll',
+        }
     ]
 };
