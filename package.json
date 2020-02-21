@@ -24,8 +24,7 @@
     "gatsby-transformer-remark": "^2.6.52",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1",
-    "smooth-scroll": "^16.1.2"
+    "react-helmet": "^5.2.1"
   },
   "devDependencies": {
     "gh-pages": "^2.2.0",
