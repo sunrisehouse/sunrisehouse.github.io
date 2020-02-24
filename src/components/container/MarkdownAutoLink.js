@@ -2,6 +2,11 @@ import React, { useCallback, useEffect, useState } from 'react';
 
 import Anchor from '../presentaitional/Anchor';
 
+const isAnchorSelected = (anchorTop, scrollTop) =>{
+    // 현재 스크롤된 위치에서 화면 중앙에 anchor top 이 왔을 경우
+    return scrollTop + window.innerHeight/2 > anchorTop;
+};
+
 const filterAnchorDetails = anchors => {
     let last_depth = 0;
     anchors = [].slice.call(anchors).map(anchor => {
@@ -12,46 +17,32 @@ const filterAnchorDetails = anchors => {
             href: "#"+ anchor.parentElement.id,
             title: anchor.parentElement.innerText,
             depth: depth,
-            children: []
+            top: anchor.getBoundingClientRect().top,
         });
     });
-    constructTree(anchors);
     return anchors;
-}
-
-const constructTree = list => {
-    let deleteNode = [];
-    for (let i = 0; i < list.length; i++) {
-      for (let j = i+1; j < list.length; j++) {
-        if (list[i].depth + 1 === list[j].depth) {
-            list[i].children.push(list[j]);
-            deleteNode.push(j);
-        }
-        else if (list[i].depth >= list[j].depth) break;
-      } 
-    }
-    deleteNode.sort((a,b)=>b-a).forEach(index => list.splice(index,1));
 }
 
 export default () => {
     const [anchors, setAnchors] = useState([]);
+    const [scrollTop, setScrollTop] = useState(null);
 
-    const getAnchorItems = useCallback((anchorList) => {
+    const scrollHandler = useCallback(() => {
+        const newScrollTop = window.scrollY || document.documentElement.scrollTop;
+        setScrollTop(newScrollTop);
+    }, []);
+
+    const getAnchorItems = (anchorList) => {
         return anchorList.map((anchor) => {
-            if (anchor.children.length > 0) {
-                return (
-                    <Anchor
-                        title={anchor.title}
-                        href={anchor.href}
-                    >
-                        {getAnchorItems(anchor.children)}
-                    </Anchor>
-                );
-            }
+            const { title, href, depth, top } = anchor;
             return (
-                <Anchor title={anchor.title} href={anchor.href}/>
+                <Anchor title={title} href={href} depth={depth} isSelected={isAnchorSelected(top , scrollTop)}/>
             );
         });
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', scrollHandler);
     }, []);
 
     useEffect(() => {

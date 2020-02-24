@@ -4,13 +4,10 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 
 import './Anchor.css';
 
-export default ({ title, href, children }) => {
+export default ({ title, href, depth, isSelected }) => {
     return (
-        <div className="anchor">
-            <div onClick={() => scrollTo(href)}>
-                {title}
-            </div>
-            {children}
+        <div className={`anchor ${isSelected? 'selected' : ''} depth${depth}`} onClick={() => scrollTo(href)}>
+            {title}
         </div>
     );
 };

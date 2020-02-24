@@ -1,4 +1,31 @@
 .anchor {
-    padding-left: 15px;
     font-size: 14px;
+}
+
+.anchor.selected {
+    font-weight: 600;
+}
+
+.anchor.depth2 {
+
+}
+
+.anchor.depth3 {
+    margin-left: 15px;
+}
+
+.anchor.depth4 {
+    margin-left: 30px;
+}
+
+.anchor.depth5 {
+    margin-left: 45px;
+}
+
+.anchor.depth6 {
+    margin-left: 60px;
+}
+
+.anchor.depth7 {
+    margin-left: 75px;
 }
