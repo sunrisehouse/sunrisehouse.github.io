@@ -42,6 +42,8 @@ export default () => {
     };
 
     useEffect(() => {
+        // TODO: unmount 될 때 event 취소하기
+        // TODO: throttling 걸기
         window.addEventListener('scroll', scrollHandler);
     }, []);
 
