@@ -14,7 +14,7 @@ export default ({ data }) => {
                 title="home"
             />
             hi
-
+    
             {
                 posts.map(({ node }) => {
                     return (
@@ -23,6 +23,7 @@ export default ({ data }) => {
                             title={node.frontmatter.title}
                             description={node.excerpt}
                             key={node.frontmatter.id}
+                            imageFluid={node.frontmatter.image !== null ? node.frontmatter.image.childImageSharp.fluid : null}
                         />
                     );
                 })
@@ -32,18 +33,25 @@ export default ({ data }) => {
 };
 
 export const pageQuery = graphql`
-  query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-        edges {
-            node {
-                frontmatter {
-                    id
-                    date(formatString: "MMMM DD, YYYY")
-                    title
+    query {
+        allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+            edges {
+                node {
+                    frontmatter {
+                        id
+                        date(formatString: "MMMM DD, YYYY")
+                        title
+                        image {
+                            childImageSharp {
+                                fluid(maxWidth: 800) {
+                                    ...GatsbyImageSharpFluid
+                                }
+                            }
+                        }
+                    }
+                    excerpt(pruneLength: 280)
                 }
-                excerpt(pruneLength: 280)
             }
         }
     }
-  }
 `

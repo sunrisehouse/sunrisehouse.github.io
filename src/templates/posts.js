@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import Layout from '../components/container/Layout';
 import SEO from "../components/container/Seo";
@@ -18,6 +19,10 @@ export default ({ data }) => {
             />
             <div className="blog-post-container">
                 <div className="blog-post">
+                    {
+                        frontmatter.image &&
+                        <Img fluid={frontmatter.image.childImageSharp.fluid} />
+                    }
                     <h1>{frontmatter.title}</h1>
                     <h2>{frontmatter.date}</h2>
                     <div
@@ -42,6 +47,13 @@ export const pageQuery = graphql`
                 id
                 date(formatString: "MMMM DD, YYYY")
                 title
+                image {
+                    childImageSharp {
+                        fluid(maxWidth: 800) {
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
             }
         }
     }

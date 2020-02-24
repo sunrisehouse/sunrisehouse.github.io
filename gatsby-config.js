@@ -20,6 +20,19 @@ module.exports = {
             },
         },
         {
+            resolve: 'gatsby-source-filesystem',
+            options: {
+                name: 'resources',
+                path: `${__dirname}/resources/`,
+            },
+        },
+        {
+            resolve: 'gatsby-plugin-sharp',
+        },
+        {
+            resolve: 'gatsby-transformer-sharp',
+        },
+        {
             resolve: 'gatsby-transformer-remark', // gatsby-source-filesystem 뒤에 와야함.
             options: {
                 plugins: [
@@ -42,10 +55,7 @@ module.exports = {
             resolve: 'gatsby-plugin-react-helmet',
         },
         {
-            resolve: 'gatsby-plugin-sharp',
-        },
-        {
             resolve: 'gatsby-plugin-smoothscroll',
-        }
+        },
     ]
 };
