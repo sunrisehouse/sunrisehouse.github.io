@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useMemo } from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 
@@ -6,11 +6,32 @@ import Layout from '../components/container/Layout';
 import SEO from "../components/container/Seo";
 import FixedRightSideBar from "../components/presentaitional/FixedRightSideBar";
 import MarkdownAutoLink from "../components/container/MarkdownAutoLink";
+import RelatedPosts from "../components/presentaitional/RelatedPosts";
 
-// this prop will be injected by the GraphQL query below.
 export default ({ data }) => {
-    const { markdownRemark } = data // data.markdownRemark holds your post data
-    const { frontmatter, html, excerpt } = markdownRemark
+    const {
+        markdownRemark: {
+            frontmatter,
+            html,
+            excerpt
+        },
+        allMarkdownRemark: {
+            edges,
+        },
+    } = data;
+
+    const relatedPostList = useMemo(() => {
+        return edges.map((edge) => {
+            const { id, title } = edge.node.frontmatter;
+            return {
+                id,
+                title,
+            };
+        }) 
+    }, [edges]);
+
+    console.log('sdfds', relatedPostList)
+
     return (
         <Layout>
             <SEO
@@ -32,14 +53,15 @@ export default ({ data }) => {
                 </div>
             </div>
             <FixedRightSideBar>
-                <MarkdownAutoLink/>
+                <MarkdownAutoLink />
+                <RelatedPosts relatedPostList={relatedPostList}/>
             </FixedRightSideBar>
         </Layout>
-    )
-}
+    );
+};
 
 export const pageQuery = graphql`
-    query($postId: String!) {
+    query($postId: Int!, $relatedPostIds: [Int!]!) {
         markdownRemark(frontmatter: { id: { eq: $postId } }) {
             html
             excerpt(pruneLength: 160)
@@ -56,5 +78,15 @@ export const pageQuery = graphql`
                 }
             }
         }
+        allMarkdownRemark(filter: {frontmatter: {id: {in: $relatedPostIds}}}) {
+            edges {
+                node {
+                    frontmatter {
+                        id
+                        title
+                    }
+                }
+            }
+        }
     }
-`
+`;

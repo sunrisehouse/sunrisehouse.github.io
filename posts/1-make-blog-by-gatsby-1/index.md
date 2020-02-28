@@ -1,5 +1,5 @@
 ---
-id: "1"
+id: 1
 date: "2020-02-19"
 title: "Gatsby 로 개인 blog 만들기 (1)"
 image: ./aaaa.jpg
