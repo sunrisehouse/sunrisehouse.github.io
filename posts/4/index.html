@@ -1,0 +1,850 @@
+<!DOCTYPE html><html lang="ko"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 5.4.2"/><meta data-react-helmet="true" name="description" content="2021년 1학기 컴퓨터 네트워크 수업 정리"/><meta data-react-helmet="true" name="keywords" content="blog,sunrisehouse,jungwoo han,한정우,블로그,programming,software,coding,프로그래밍,코딩,개발,developer"/><meta data-react-helmet="true" name="author" content="Jungwoo Han | sunrisehouse"/><meta data-react-helmet="true" name="og:image" content="https://sunrisehouse.github.io/images/hanjws.jpg"/><meta data-react-helmet="true" property="og:site_name" content="Jungwoo Han Blog"/><meta data-react-helmet="true" property="og:title" content="컴퓨터 네트워크"/><meta data-react-helmet="true" property="og:description" content="2021년 1학기 컴퓨터 네트워크 수업 정리"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="Jungwoo Han | sunrisehouse"/><meta data-react-helmet="true" name="twitter:title" content="컴퓨터 네트워크"/><meta data-react-helmet="true" name="twitter:description" content="2021년 1학기 컴퓨터 네트워크 수업 정리"/><meta data-react-helmet="true" name="google-site-verification" content="RZnFgzTyqGnyCqfaCKx2-HloYzNA3D3yrC2N1-J1K5U"/><meta data-react-helmet="true" name="naver-site-verification" content="189cca7bf40ac78f41ef4578ab1084d6a017fca2"/><style data-href="/styles.e93c99669b582638bf6a.css" data-identity="gatsby-global-css">@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);*{margin:0;padding:0}body{color:#212121}body,input,textarea{font:400 18px/1.8 Spoqa Han Sans Neo,Apple SD Gothic Neo,Nanum Barun Gothic,Nanum Gothic,Verdana,Arial,Malgun Gothic,Dotum,sans-serif}a{outline:none}a,a:active,a:hover{color:#212121;text-decoration:none}a:active,a:hover{background-color:transparent}button{-webkit-appearance:none;appearance:none}button:focus{box-shadow:none;outline:0}*{-webkit-tap-highlight-color:rgba(0,0,0,0)}code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#000;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;text-shadow:0 1px #fff;white-space:pre;word-break:normal;word-spacing:normal}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{background:#b3d4fc;text-shadow:none}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{background:hsla(0,0%,100%,.5);color:#9a6e3a}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.gm-page-comp{background-color:#000}.gm-page-comp>.page-center-container{margin:0 auto;max-width:1200px;padding:20px}@media(min-width:1000px){.gm-page-comp>.page-center-container{padding:40px}}.gm-page-comp>.page-center-container>.title{color:#fff;padding:100px;text-align:center}.gm-page-comp>.page-center-container>.nft-container{background-color:#fff;height:1500px;overflow:hidden;position:relative}.gm-page-comp>.page-center-container>.nft-container>.contents-container{height:2220px;left:0;position:absolute;top:-720px;width:100%}@media(min-width:410px){.gm-page-comp>.page-center-container>.nft-container>.contents-container{height:2140px;top:-640px}}@media(min-width:1000px){.gm-page-comp>.page-center-container>.nft-container>.contents-container{height:2040px;top:-540px}}.gm-page-comp>.page-center-container>.nft-container>.loading{animation:fadein 1s;font-size:40px;height:0;left:50%;opacity:0;position:absolute;top:20%;transform:translate(-50%,-50%)}@keyframes fadein{0%{opacity:0}to{opacity:1}}.border-button-comp{color:#666;cursor:pointer;display:block;font-size:16px;font-weight:600;margin:0;padding:16px;text-align:center;transition:background-color .3s;width:100%}.border-button-comp,.border-button-comp:active{background-color:#fff;border:1px solid #f0f0f0}@media(min-width:1000px){.border-button-comp:hover{background-color:#f0f0f0;border:1px solid #f0f0f0}}.post-card-comp{background-color:#fff;border-radius:24px;box-shadow:0 2px 12px 0 rgba(0,0,0,.5);cursor:pointer;overflow:hidden;transition:box-shadow .5s,transform .5s}@media(min-width:1000px){.post-card-comp{box-shadow:0 2px 16px 0 rgba(0,0,0,.5)}}.post-card-comp:hover{transform:scale(1.04)}.post-card-comp:hover>.main-image-container>.main-image{transform:scale(1)}.post-card-comp>.main-image-container{background-color:#f0f0f0;height:120px;overflow:hidden;position:relative}.post-card-comp>.main-image-container>.main-image{background-image:url(/images/hanjws.jpg);background-position:50%;background-repeat:no-repeat;background-size:cover;height:100%;transform:scale(1.4);transition:transform .5s;width:100%}.post-card-comp>.main-image-container>.curtain{background-color:rgba(0,0,0,.2);height:100%;left:0;position:absolute;top:0;width:100%}.post-card-comp>.description-container{padding:16px}.post-card-comp>.description-container>.date{color:#999;font-size:12px;line-height:1.4}.post-card-comp>.description-container>.title{-webkit-line-clamp:1;-webkit-box-orient:vertical;display:-webkit-box;font-size:20px;font-weight:600;height:32px;line-height:1.5;overflow:hidden;text-overflow:ellipsis;white-space:normal;word-break:keep-all}@media(min-width:1000px){.post-card-comp>.description-container>.title{-webkit-line-clamp:1;font-size:20px;height:36px}}.post-card-comp>.description-container>.post-theme-container{line-height:1.5;margin-bottom:16px}.post-card-comp>.description-container>.post-theme-container>span{border:1px solid #f0f0f0;border-radius:4px;color:#999;font-size:12px;margin-right:2px;padding:2px 4px}.post-card-comp>.description-container>.description{-webkit-line-clamp:2;-webkit-box-orient:vertical;color:#666;display:-webkit-box;font-size:16px;font-weight:400;line-height:1.4;min-height:48px;overflow:hidden;text-overflow:ellipsis;white-space:normal;word-break:keep-all}.home-page-comp{padding-bottom:60px}.home-page-comp .centered-container{box-sizing:border-box;margin:0 auto;max-width:1000px;width:100%}.home-page-comp>.title{font-size:20px;font-weight:500;padding:20px 16px}@media(min-width:1000px){.home-page-comp>.title{font-size:24px}}.home-page-comp>.greeting{align-items:center;animation:appear 1s;animation-timing-function:linear;display:flex;height:300px;justify-content:center;padding-bottom:80px;position:relative}@media(min-width:1000px){.home-page-comp>.greeting{height:500px}}.home-page-comp>.greeting>canvas{bottom:0;height:100%;left:0;position:absolute;width:100%}.home-page-comp>.post-container{animation:appear2 2s;animation-timing-function:linear;padding:20px}.home-page-comp>.post-container>.post-wrapper{animation:appear 1s;margin-bottom:28px}.home-page-comp>.post-container>.post-wrapper:last-child{margin-bottom:0}.home-page-comp>.more-button-container{margin-top:20px;padding:0 16px}.comment-box-comp{color:#666;font-size:16px;padding:32px 0 80px}.comment-box-comp .writer-container{align-items:baseline;display:flex}.comment-box-comp .writer-container .name{font-weight:600}.comment-box-comp .writer-container .date{font-size:14px;margin-left:20px}.register-comment-form-comp{font-size:16px}.register-comment-form-comp .caution{background-color:#eef;color:#66f;font-size:14px;margin-top:20px;padding:12px}.register-comment-form-comp .form{box-shadow:0 2px 4px 0 rgba(0,0,0,.5);padding:20px}.register-comment-form-comp .writer-label{display:flex;font-size:600}.register-comment-form-comp .writer-label .label{padding:8px 0;width:80px}.register-comment-form-comp .writer-label>input{flex:1 1;font-size:14px;padding:8px 12px}.register-comment-form-comp .content-label{display:flex;margin-top:20px}.register-comment-form-comp .content-label .label{padding:8px 0;width:80px}.register-comment-form-comp .content-label>textarea{box-sizing:border-box;flex:1 1;font-size:14px;padding:8px 12px}.register-comment-form-comp .submit-button-container{margin-top:20px;text-align:right}.register-comment-form-comp .submit-button-container .submit-button{background-color:#66f;border:none;border-radius:4px;color:#fff;cursor:pointer;font-weight:600;padding:12px;transition:background-color .4s}.register-comment-form-comp .submit-button-container .submit-button:hover{background-color:#eef;color:#444}.markdown-style>*{margin-bottom:12px}.markdown-style ol,.markdown-style ul{padding-left:20px}.markdown-style pre{font-size:14px}.markdown-style blockquote{background-color:#f0f0f0;border-left:4px solid #4765ff;padding:20px 16px}.markdown-style hr{margin-top:65px}.markdown-style a{color:#212121;outline:none;text-decoration:underline}.markdown-style a:active,.markdown-style a:hover{background-color:#4765ff;color:#fff;text-decoration:underline}.markdown-style h1{margin-top:64px}.markdown-style h2{margin-top:60px}.markdown-style h3{margin-top:56px}.markdown-style h4{margin-top:52px}.markdown-style h5{margin-top:48px}.markdown-style h6{margin-top:44px}.markdown-style h1{font-size:28px}@media(min-width:1000px){.markdown-style h1{font-size:36px}}.markdown-style h2{font-size:22px}@media(min-width:1000px){.markdown-style h2{font-size:26px}}.markdown-style h3{font-size:20px}@media(min-width:1000px){.markdown-style h3{font-size:22px}}.markdown-style pre{font-size:16px}.markdown-style li,.markdown-style p{color:#444;font-size:16px;line-height:28px}.markdown-style table{background-color:#eee;border-radius:4px;box-shadow:0 2px 4px 0 rgba(0,0,0,.5)}.markdown-style table td,.markdown-style table th{border-bottom:1px solid #fff;font-size:16px;padding:16px 20px}.markdown-style .anchor.before{padding-left:0}@keyframes appear{0%{opacity:0}to{opacity:1}}@keyframes appear2{0%{opacity:0}50%{opacity:0}to{opacity:1}}.post-page-comp>.main-image-container{background-color:#f0f0f0;background-position:50%;background-repeat:no-repeat;background-size:cover;height:200px;position:relative}@media(min-width:1000px){.post-page-comp>.main-image-container{height:300px}}.post-page-comp>.main-image-container>.cover{background-color:rgba(0,0,0,.7);height:100%;left:0;position:absolute;right:0;width:100%}.post-page-comp>.main-image-container>.cover>.center{box-sizing:border-box;left:50%;padding:0 16px;position:absolute;top:50%;transform:translate(-50%,-50%);width:100%}.post-page-comp>.main-image-container>.cover>.center>.title{color:#fff;font-size:24px;font-weight:500;line-height:35px;text-align:center}@media(min-width:1000px){.post-page-comp>.main-image-container>.cover>.center>.title{font-size:40px;font-weight:500;line-height:60px}}.post-page-comp>.main-image-container>.cover>.center>.date{color:#fff;font-size:13px;font-weight:400;letter-spacing:-.02em;line-height:16px;margin-top:8px;text-align:center}.post-page-comp>.main-image-container>.cover>.left-bottom{bottom:20px;left:16px;position:absolute}.post-page-comp>.main-image-container>.cover>.left-bottom>.date{color:#fff;font-size:13px;font-weight:400;letter-spacing:-.02em;line-height:16px}.post-page-comp>.contents-container{margin-bottom:80px;overflow:hidden;padding:20px}@media(min-width:1000px){.post-page-comp>.contents-container{margin:0 auto 100px;max-width:800px;width:100%}}.post-page-comp>.contents-container>.description{animation:appear 1s;animation-timing-function:linear}.post-page-comp>.contents-container>.comments-section{border-top:2px solid #666;margin-top:160px;padding-top:40px}.post-page-comp>.contents-container>.comments-section>h3{margin-bottom:40px}.post-page-comp>.contents-container>.comments-section>.comments-container{margin-top:40px}.post-page-comp>.contents-container>.comments-section>.comments-container>.comment-wrapper{border-bottom:1px solid #aaa}.post-page-comp>.home-button{left:16px;position:fixed;top:12px}@media(min-width:1000px){.post-page-comp>.home-button{left:24px;top:16px}}.post-page-comp>.home-button>.hanjungwoo{color:#333;font-weight:400;text-decoration:none}@media(min-width:1000px){.post-page-comp>.home-button>.hanjungwoo{font-size:28px}}.post-page-comp>.home-button>.hanjungwoo:hover{text-decoration:underline}.main-page{font-family:Noto Sans KR,sans-serif;line-height:1.5}.main-page .appbar-container{z-index:1}.main-page .image-section{background-image:url(https://decipher.ac/img/snu_background.png);background-position:50%,50%;background-repeat:none;background-size:cover;height:calc(100vh - 64px)}.main-page .image-section .text{box-sizing:border-box;color:#fff;font-size:36px;font-weight:700;margin:0 auto;max-width:1200px;padding-left:15px;padding-right:15px;padding-top:calc(50vh - 180px);width:100%}.main-page .strength-section{padding:100px 15px}.main-page .strength-section h2{font-size:24px;font-weight:600;margin-bottom:75px;text-align:center}@media(min-width:1000px){.main-page .strength-section h2{font-size:28px}}.main-page .strength-section .box-container .box{align-items:center;display:flex;flex-direction:column;padding:50px;text-align:center}.main-page .strength-section .box-container .box img{height:60px;margin-bottom:20px;width:60px}.main-page .strength-section .box-container .box h3{margin-bottom:20px}.main-page .strength-section .box-container .box p{font-size:16px;font-weight:300}@media(min-width:1000px){.main-page .strength-section .box-container{display:flex;justify-content:center;padding:60px 0}}</style><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><title data-react-helmet="true">컴퓨터 네트워크 | Jungwoo Han</title><link rel="alternate" type="application/rss+xml" title="sunrisehouse rss feed" href="/rss.xml"/><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="post-page-comp"><div class="main-image-container" style="background-image:url()"><div class="cover"><div class="center"><h1 class="title">컴퓨터 네트워크</h1><h3 class="date">2021-03-09</h3></div><div class="left-bottom"></div></div></div><div class="contents-container"><div class="description markdown-style"><h1 id="컴퓨터-네트워크" style="position:relative;"><a href="#%EC%BB%B4%ED%93%A8%ED%84%B0-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC" aria-label="컴퓨터 네트워크 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>컴퓨터 네트워크</h1>
+<p>2021년 1학기 컴퓨터 네트워크 수업을 듣고 나름의 정리를 해보겠다는 생각으로 본 글을 작성하게 됐다.
+keyword 만 듣고 어떤 내용인지 떠올랐으면 좋겠다.</p>
+<h2 id="1-introduction" style="position:relative;"><a href="#1-introduction" aria-label="1 introduction permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Introduction</h2>
+<p>네트워크 전반에 관한 내용을 다룬다.</p>
+<ul>
+<li>
+<details>
+<summary>networks</summary>
+<div markdown="1">
+<blockquote>
+<ul>
+<li>definition: the interconnection of a set of devices capable of communication</li>
+<li>서로 통신할 수 있는 애들 모아놓은 거</li>
+</ul>
+</blockquote>
+</div>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<details>
+<summary>LAN, WAN</summary>
+<div markdown="1">
+<blockquote>
+<ul>
+<li>LAN
+<ul>
+<li>local area network</li>
+<li>작은 네트워크</li>
+</ul>
+</li>
+<li>WAN
+<ul>
+<li>wide area network</li>
+<li>큰 네트워크</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</div>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<details>
+<summary>switching</summary>
+<div markdown="1">
+<blockquote>
+<ul>
+<li>circuit swich network</li>
+<li>packeet swiched network</li>
+</ul>
+</blockquote>
+</div>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<details>
+<summary>Protocol Layering</summary>
+<div markdown="1">
+<blockquote>
+<p><strong>Protocol Layering</strong></p>
+<ul>
+<li>단순화 하기위해 만들어짐</li>
+</ul>
+</blockquote>
+<blockquote>
+<p><strong>TCP/IP Protocol</strong></p>
+</blockquote>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">> - 현재 인터넷에서 사용되는 protocol 들
+> - 데이터를 전송할 때 source 에서는 multiplexing 을 통해 data 를 계속 capsulation 하고 destination 에서는 demultiplexing 을 통해 data 를 decapsulation 한다
+> - |Layer|패킷 이름|주소|프로토콜 들|
+  > |---|:---:|:---:|:---:|
+  > |**Application**|message|name|HTTP, DNS, FTP ...|
+  > |**Transport**|segment, user datagram|port numbers|TCP, UDP|
+  > |**Network**|datagram|Logical addresses|IP|
+  > |**Data Link**|frame|Link-layer addresses|
+  > |**Physical**|bit||</code></pre></div>
+<blockquote>
+<p><strong>OSI 7 계층</strong></p>
+</blockquote>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">> - open systems interconnection model
+> - TCP/IP Protocol 에서 session, presentation 레이어가 추가됨
+> - OSI 의 Application, presentation, session 을 합쳐 TCP/IP 의 Application 으로 생각한다.</code></pre></div>
+</div>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<details>
+<summary>Internet</summary>
+<div markdown="1">
+<blockquote>
+<ol>
+<li>여러 WAN 과 LAN 으로 구성되어 있는 network</li>
+<li>packet switching 방식</li>
+<li>TCP/IP 프로토콜 사용</li>
+</ol>
+</blockquote>
+</div>
+</li>
+</ul>
+</details>
+<hr>
+<h2 id="2-application-layer" style="position:relative;"><a href="#2-application-layer" aria-label="2 application layer permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Application Layer</h2>
+<p>인터넷 사용자들이 사용하지는 서비스들을 제공하는 Layer</p>
+<ul>
+<li>
+<details>
+<summary>client-server paradigm vs peer-to-peer paradigm (+ mixed paradigm)</summary>
+<div markdown="1">
+<blockquote>
+<table>
+<thead>
+<tr>
+<th>특징</th>
+<th align="center">client-server</th>
+<th align="center">peer-to-pder</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>role</strong></td>
+<td align="center">dedicated server, specific clients</td>
+<td align="center">each <strong>node</strong> can be both server and client</td>
+</tr>
+<tr>
+<td><strong>service</strong></td>
+<td align="center">the server provides services to the client</td>
+<td align="center">each peer can provide and request services</td>
+</tr>
+<tr>
+<td><strong>main purpose</strong></td>
+<td align="center">sharing imformation</td>
+<td align="center">connectivity</td>
+</tr>
+<tr>
+<td><strong>data stored</strong></td>
+<td align="center">in centralized server</td>
+<td align="center">each peer has its own data</td>
+</tr>
+<tr>
+<td><strong>management</strong></td>
+<td align="center">difficult to manage</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td><strong>bottleneck</strong></td>
+<td align="center">more chances of getting bottlenected</td>
+<td align="center">fewer chances of getting bottlenectked</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">server: alwayes on host</td>
+<td align="center">no always on server</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">server has permanent IP address</td>
+<td align="center">peers are intermittently connected and change their IP address</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">provides requested service to client</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td></td>
+<td align="center">highly scalability, increase service capability</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td></td>
+<td align="center">highly distributed and decentralized nature</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<blockquote>
+<p>mixed paradigm</p>
+</blockquote>
+</div>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<details>
+<summary>socket, socket interface</summary>
+<div markdown="1">
+<blockquote>
+<p><strong>socket interface</strong></p>
+<ul>
+<li>운영체제에서 제공하는 소켓을 사용하기 위한 명령어들</li>
+<li>application layer 와 운영체제를 연결시켜주는 명령어들</li>
+</ul>
+<p><strong>socket</strong></p>
+<ul>
+<li>data structure</li>
+<li>application layer (process) 에서 os 에 원하는 유형의 socket 만들어달라고 요청하면 os 가 하나 뚝딱해줌</li>
+<li>application layer 에서 만든 소켓에서 원하는 데이터 얻어올 수 있음</li>
+<li>socket address: 32 bit IP address, 16 bit Port number</li>
+</ul>
+</blockquote>
+</div>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<details>
+<summary>UDP, TCP, SCTP</summary>
+<div markdown="1">
+<blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">udp</th>
+<th align="center">tcp</th>
+<th align="center">sctp</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">connectionless</td>
+<td align="center">connection-oriented</td>
+<td align="center">connection-oriented</td>
+</tr>
+<tr>
+<td align="center">unreliable</td>
+<td align="center">reliable</td>
+<td align="center">reliable</td>
+</tr>
+<tr>
+<td align="center">datagram</td>
+<td align="center">byte-stream</td>
+<td align="center">multi-stream (by multiple network-layer connection)</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<details>
+<summary>URL</summary>
+<div markdown="1">
+<blockquote>
+<ul>
+<li>protocol + host + port + path</li>
+</ul>
+</blockquote>
+</div>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<p>HTTP</p>
+<ul>
+<li>
+<details>
+<summary>web documents (static documents, dynamic documents, active documents)</summary>
+<div markdown="1">
+<blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">static documents</th>
+<th align="center">dynamic documents</th>
+<th align="center">active documents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">fixed content documents that are created and stored in a server</td>
+<td align="center">created by a web server whenver a browser request the document</td>
+<td align="center">programs or scripts being run at the client site</td>
+</tr>
+<tr>
+<td align="center">HTML, XML ...</td>
+<td align="center">CGI, JSP, ASP</td>
+<td align="center">javascript</td>
+</tr>
+<tr>
+<td align="center">서버에 저장될 때 그대로 변하지 않는 파일</td>
+<td align="center">클라이언트에서 요청 올 때 변경되는 파일</td>
+<td align="center">클라이언트에서 돌아가는 스크립트나 프로그램</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<details>
+<summary>HTTP message</summary>
+<div markdown="1">
+<blockquote>
+<ul>
+<li>request message = <strong>request line</strong> + header lines + 빈줄 + body</li>
+<li>response message = <strong>status line</strong> + header lines + 빈줄 + body</li>
+<li>
+<img src="/images/4-1.png" width="50%" >
+</li>
+<li><strong>request line</strong> = method + url + version (ex: "GET /requestFile.html HTTP/1.1" )</li>
+<li><strong>status line</strong> = version + status code + phrase (ex: "HTTP/1.1 200 OK" )</li>
+</ul>
+</blockquote>
+</div>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<details>
+<summary>non persistent vs persitent</summary>
+<div markdown="1">
+<blockquote>
+<p>non persistent 는 각각의 request-response 마다 tcp connection 을 만들었다.
+persistent 는 tcp connection 을 모든 데이터가 다 주고받을 때까지 닫지 않는다.
+tcp 에 있는 handshate 줄일 수 있다.</p>
+</blockquote>
+</div>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<details>
+<summary>HTTP1.0 / HTTP1.1 / HTTP2.0 / HTTP3.0</summary>
+<div markdown="1">
+<blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">HTTP1.0</th>
+<th align="center">HTTP1.1</th>
+<th align="center">HTTP2.0</th>
+<th align="center">HTTP3.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">nonpersistent</td>
+<td align="center">persistent</td>
+<td align="center">persistent</td>
+<td align="center">persistent</td>
+</tr>
+<tr>
+<td align="center">TCP</td>
+<td align="center">TCP</td>
+<td align="center">TCP</td>
+<td align="center">QUIC (UDP)</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">tcp connection 하나 계속 열어놔서 latency 줄였다.</td>
+<td align="center">multiple stream 을 한 tcp connection 에 multiplexing 해서 latency 를 줄였다.</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+</li>
+</ul>
+</details>
+</li>
+<li>
+<details>
+<summary>FTP</summary>
+<div markdown="1">
+<blockquote>
+<p>File Transfer Protocol</p>
+<ul>
+<li>HTTP 도 파일 전송 가능하지만 큰 파일 전송하는 것은 FTP 가 유리</li>
+<li>FTP server 의 구성: server control process, server data process</li>
+<li>FTP network 구조: <img src="/images/4-2.png" width="50%" /></li>
+<li>control connection 이 전체 FTP session 동안 연결되어있다.</li>
+<li>data connection 은 control connection 살아있는 동안에 데이터 전송할 때 연결됐다 닫혔다 한다.</li>
+<li>control connection port 21, data connection port 20</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>data connection 여는 순서</p>
+<ol>
+<li>클라이언트가 임시 포트로 passive open 한다</li>
+<li>클라이언트가 PORT 명령어로 포트 번호 보낸다.</li>
+<li>포트 넘버 받아서 active open 한다.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ul>
+<li>control connection 으로 명령어 주고 받고 data connection 으로 파일 주고받는다.</li>
+<li>FTP 는 파일 가져오고, 파일 저장하고, 파일 directory 하는 세가지 일을 한다.</li>
+</ul>
+</blockquote>
+</div>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<p>Email Protocol</p>
+<ul>
+<li>
+<details>
+<summary>Email Protocol</summary>
+<div markdown="1">
+<blockquote>
+<ul>
+<li>HTTP, FTP 와 다르게 one-way transaction. (HTTP, FTP 는 request, response 처럼 데이터 주고 받고 하는데 그게 아니란 듯)</li>
+<li>네트워크 구조: <img src="/images/4-3.png" width="50%" /></li>
+<li>UA 2개, MTA client-server 2개, MAA client-server 1개</li>
+<li>UA (user agent): 보내고 받는 일 한다. (전자 메일 형식으로 바꿔주는 일도)</li>
+<li>email address: [local part]@[domain name]</li>
+<li>2개의 MTA client-server 의 프로토콜: SMTP</li>
+<li>1개의 MAA client-server 의 프로토콜: POP or IMAP</li>
+<li>MTA(Message Transfer Agent) 에서 메일 보내면 메일 서버에 저장하는 일 하고</li>
+<li>MAA(Message Access Agent) 에서 메일하고 메일 목록 가져오는 일 하는 듯</li>
+</ul>
+</blockquote>
+</div>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<details>
+<summary>SMTP</summary>
+<div markdown="1">
+<blockquote>
+<ul>
+<li>Message Transfer Agent</li>
+<li>UA 의 MTA client 에서 자신의 메일 서버에 있는 MTA server 로 메일 보낸다.</li>
+<li>그리고 MTA 서버는 다시 MTA 클라이언트한테 상대방 메일 서버의 MTA server 한테 메일 보낸다.</li>
+<li>명령어가 있다.</li>
+<li>port 25 로 tcp connection 열고 메시지 보내고 연결 닫고</li>
+<li>connection establishment -> message transfer -> connection termination</li>
+<li>메일을 전달하는 세션동안 보내는 사람, 주소등을 알고 있어야하기 때문에 stateful 하다</li>
+</ul>
+</blockquote>
+</div>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<details>
+<summary>POP3 vs IMAP4</summary>
+<div markdown="1">
+<blockquote>
+<ul>
+<li>Message Access Agent</li>
+<li>UA 에서 메일 접근하는 프로토콜들</li>
+<li>POP3 (Post Office Protocol) 은 단순</li>
+<li>IMAP4 (Internet Mail Access Protocol) 는 기능 많다.</li>
+<li>메일에 접근하는 세션을 유지해야 하기 때문에 stateful 하다.</li>
+</ul>
+</blockquote>
+</div>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<details>
+<summary>MIME</summary>
+<div markdown="1">
+<blockquote>
+<ul>
+<li>SMTP 는 ASCII 만 쓰는데 이제 8 bit 이상의 코드는 MIME 사용</li>
+<li>Network Virtual Terminal (NVT) ASCII 로 바뀌어서 전달된다는 듯</li>
+</ul>
+</blockquote>
+</div>
+</li>
+</ul>
+</details>
+</li>
+<li>
+<p>Remote logging protocols</p>
+<ul>
+<li>
+<details>
+<summary>TELNET</summary>
+<div markdown="1">
+</div>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<details>
+<summary>SSH</summary>
+<div markdown="1">
+<blockquote>
+<ul>
+<li>Secure Shell</li>
+<li>SSH-1, SSH-2 있고 SSH-1 은 deprecated</li>
+<li>잘모르겠다.</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>SSH TRANS (ssh transport layer protocol)</p>
+<ul>
+<li>비밀을 위해</li>
+<li>데이터 무결성 보장</li>
+<li>서버 인증</li>
+<li>메시지 압축 -> 공격 힘들게, 효율적이게</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>SSH AUTH (ssh authentication protocol)</p>
+<ul>
+<li>secure channel 이 만들어지고 authenticate 한다</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>SSH CONN (ssh connection protocol)</p>
+<ul>
+<li>secure channel 만들어지고 authenticate 되고 ssh 는 ssh conn 이 구현된 소프트웨어 조각 실행</li>
+<li>이걸로 여러 가지 한다는 듯</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>ssh for remote logging: putty, tectia</li>
+<li>ssh for file transfer: scp, sftp</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>port forwarding</p>
+<ul>
+<li>secure service 제공 안하는 다른 서비스 (FTP, SMTP...) 등에서 secure channel 이용할 수 있게 ssh 에서 제공하는 서비스</li>
+</ul>
+</blockquote>
+</div>
+</li>
+</ul>
+</details>
+</li>
+<li>
+<details>
+<summary>DNS</summary>
+<div markdown="1">
+<blockquote>
+<ul>
+<li>name -> ip address</li>
+<li>mapping 너무 많아서 분산되어있다.</li>
+<li>Hierarchical name space 로 tree 구조로 이루어져있다.</li>
+<li>domain 과 zone <img src="/images/4-4.png" width="50%" /></li>
+<li>domain 은 subtree / zone 은 dns server 가 responsible (or authoritative) 하는 범위</li>
+<li>Internet 의 domain name space 는 세 section 으로 나뉜다: generic domain, country domain, inverse domain (ip 주면 이름 찾아주는 애인데 deprecated 됐다함)</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>IP 주소 찾는 방법</li>
+<li>reculsive resolution: local domain server 가 root server 한테 물어보면 그 서버가 다시 그 아래 server 한테 물어봐서 찾는다.</li>
+<li>interative resolution: local domain server 가 root server 한테 물어보면 그 아래 서버 주수 주고 local domain server 가 찾을 때까지 계속 물어보고 다닌다.</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Resource Rcoreds</p>
+<ul>
+<li>(Domain Name, Type, Class, TTL, Value)</li>
+<li>Domain Name: 리소스 id</li>
+<li>Type: A, NS, CNAME, SOA, MX, AAAA -> value 를 어떻게 받아들일것인지</li>
+<li>Class</li>
+<li>TTL: 정보가 유효한 시간</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Resource Records Type</p>
+<ul>
+<li>value 를 어떻게 받아들일 것인지</li>
+<li>A 타입이면 32-bit IPv4 address 로</li>
+<li>NS 면 identifies the authoritative servers for a zone</li>
+<li>CNAME 이면 호스트의 공식 이름</li>
+<li>AAAA 면 IPv6 address</li>
+<li>MX 면 메일을 메일 서버로 리다이렉트하는</li>
+<li>SOA 는 zone 의 시작</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>UDP, TCP 둘 다 사용하는데 UDP 는 response message 가 512 바이트보다 작은 경우에 사용</li>
+<li>DDNS 는 동적으로 host 추가했다 삭제했다 ip 바꿨다가 하기 쉽게 만들어짐. (DHCP 이용해서)</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>authoritative name server: hostname to an IP address 하는 공식적인 translation 제공한다.</li>
+<li>local name server: DNS system 으로 proxy 한다. host 가 우선 local name server 한테 mapping 요청한다. 그러면 로컬네임서버가 얻어와서 host 한테 준다.</li>
+</ul>
+</blockquote>
+</div>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<details>
+<summary>Chord</summary>
+<div markdown="1">
+<ul>
+<li>each node have finger table (routing table)</li>
+<li>successor: N >= k 중 가장 가까운 N</li>
+<li>predecessor: 전 노드들</li>
+</ul>
+</div>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<details>
+<summary>Kademlia</summary>
+<div markdown="1">
+<ul>
+<li>두 node 나 key 사이의 거리 구하기 위해 XOR 사용</li>
+<li>가장 가까운 노드가 키를 가지고 있다.</li>
+<li>number of leaves = number of identifiers(node or key)</li>
+<li>routing table 에서 number of rows 는 tree height 만큼</li>
+</ul>
+</div>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<details>
+<summary>BitTorrent</summary>
+<div markdown="1">
+</div>
+</li>
+</ul>
+</details>
+<h2 id="3-transport-layer" style="position:relative;"><a href="#3-transport-layer" aria-label="3 transport layer permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. Transport Layer</h2>
+<ul>
+<li>Transport layer services</li>
+<li>Transport layer basic protocols</li>
+<li>Internet transport layer protocols
+<ul>
+<li>
+<p>udp</p>
+<ul>
+<li>
+<details>
+<summary>datagram (packet name)</summary>
+<div markdown="1">
+</div>
+</li>
+</ul>
+</details>
+</li>
+<li>
+<p>tcp</p>
+<ul>
+<li>
+<details>
+<summary>segment (packet name)</summary>
+<div markdown="1">
+</div>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<details>
+<summary>connection</summary>
+<div markdown="1">
+<ul>
+<li>establishment</li>
+<li>data transfer</li>
+<li>termination</li>
+</ul>
+</div>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<details>
+<summary>connection</summary>
+<div markdown="1">
+</div>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<details>
+<summary>flow control</summary>
+<div markdown="1">
+<blockquote>
+<ul>
+<li>send window : open, close, shrink</li>
+<li>recieve window : open, close</li>
+</ul>
+</blockquote>
+</div>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<details>
+<summary>error control</summary>
+<div markdown="1">
+<blockquote>
+<ul>
+<li>checksum</li>
+<li>ack</li>
+<li>retransmission: retransmission time out, Tree duplicate ACK Segments (fast retransmission)</li>
+</ul>
+</blockquote>
+</div>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<details>
+<summary>congestion control</summary>
+<div markdown="1">
+<blockquote>
+<ul>
+<li>window size = minimum(rwnd, cwnd)</li>
+<li>cwnd = congestion window</li>
+<li>처음에는 slow start : exponential 하게 증가</li>
+<li>ssthresh 넘어가면 congestion avoidance : 1 씩 증가</li>
+<li>congestion 발생 => fast recovery</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>Taho: congestion 발생하면 ssthresh = cwnd/2 하고 cwnd = 1 로</li>
+<li>Reno: timeout 이면 sshtresh = cwnd/2 하고 cwnd = 1 , 3dupAck 면 ssthresh = cwnd/2 하고 cwnd = ssthresh + 3</li>
+<li>NewReno: slow start 이후에 addictive increase, multiplicative decrease (AIMD)</li>
+<li>Cubic</li>
+</ul>
+</blockquote>
+</div>
+</li>
+</ul>
+</details>
+</li>
+<li>
+<details>
+<summary>quic</summary>
+<div markdown="1">
+<blockquote>
+<ul>
+<li>UDP 사용한 apllication layer protocol</li>
+<li>udp connection 하나로 여러 스트림 연결됨</li>
+</ul>
+</blockquote>
+</div>
+</li>
+</ul>
+</details>
+</li>
+</ul>
+<h2 id="4-network-layer" style="position:relative;"><a href="#4-network-layer" aria-label="4 network layer permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. Network Layer</h2>
+<ul>
+<li>IP datagram format</li>
+<li>IPv4 address
+<ul>
+<li>classful addressing</li>
+<li>classless addressing</li>
+<li>network address</li>
+<li>DHCP</li>
+<li>NAT</li>
+<li>Fowarding</li>
+<li>MPLS</li>
+</ul>
+</li>
+</ul></div><div class="comments-section"><h3>Comments</h3><div><form class="register-comment-form-comp"><div class="form"><label class="writer-label"><span class="label">Writer. </span><input/></label><label class="content-label"><span class="label">Content</span><textarea></textarea></label><div class="submit-button-container"><button type="submit" class="submit-button">Register</button></div><div class="caution">작성하신 댓글은 스스로 삭제하실 수 없습니다! 삭제를 원하시면 ajtwlswjddnv1102@gmail.com 로 연락주세요! 댓글 기능은 Github Issue API 를 이용해 만들었습니다! 댓글 등록이 안되면 연락주세요! 댓글이 바로 반영되지 않을 수도 있어요! API requests limitation 이 있어서 너무 많이 보시면 댓글이 안보입니다!</div></div></form></div></div></div><div class="home-button"><a class="hanjungwoo" href="/">Jungwoo Han</a></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/posts/4/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-6638744adb335e6f2a3c.js\"],\"component---src-page-template-articles-tsx\":[\"/component---src-page-template-articles-tsx-6cf2e8c1adc70bd97ff9.js\"],\"component---src-page-template-home-tsx\":[\"/component---src-page-template-home-tsx-208c925aa2a4c14b05dc.js\"],\"component---src-page-template-post-tsx\":[\"/component---src-page-template-post-tsx-8500d8b317cb7a551864.js\"],\"component---src-pages-404-tsx\":[\"/component---src-pages-404-tsx-9386a3134173d62fbda6.js\"],\"component---src-pages-squart-tsx\":[\"/component---src-pages-squart-tsx-c427e23b8745b9639ffa.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="16d5800077c0e3fe61df";</script><script src="/webpack-runtime-4ee86b2e16b8dc1fee21.js" async></script><script src="/framework-193fd97338660090d6b9.js" async></script><script src="/app-6638744adb335e6f2a3c.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>

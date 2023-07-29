@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://sunrisehouse.github.io/sitemap-index.xml
+Host: https://sunrisehouse.github.io
